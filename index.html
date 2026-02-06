@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Velas Artesanales</title>
+  <style>
+    body{
+      margin:0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background:#f6f3ef;
+      color:#333;
+    }
+    header{
+      background:#c9a36a;
+      color:white;
+      padding:20px;
+      text-align:center;
+    }
+    header h1{ margin:0; }
+    .container{
+      padding:20px;
+      max-width:1100px;
+      margin:auto;
+    }
+    .productos{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap:20px;
+    }
+    .card{
+      background:white;
+      border-radius:12px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      padding:15px;
+      text-align:center;
+    }
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:10px;
+    }
+    .card h3{ margin:10px 0 5px; }
+    .precio{ font-weight:bold; color:#c9a36a; }
+    button{
+      margin-top:10px;
+      padding:10px 15px;
+      background:#c9a36a;
+      border:none;
+      color:white;
+      border-radius:8px;
+      cursor:pointer;
+    }
+    button:hover{ background:#b08b54; }
+    footer{
+      background:#333;
+      color:white;
+      text-align:center;
+      padding:15px;
+      margin-top:30px;
+    }
+  </style>
+</head>
+<body><header>
+  <h1>Velas Artesanales</h1>
+  <p>Ilumina tu espacio con intención ✨</p>
+</header><div class="container">
+  <h2>Nuestros Productos</h2>
+  <div class="productos"><div class="card">
+  <img src="https://via.placeholder.com/400x300" alt="Vela aromática">
+  <h3>Vela Aromática</h3>
+  <p>Lavanda y vainilla</p>
+  <p class="precio">$18.000 COP</p>
+  <button onclick="comprar('Vela Aromática','18000')">Comprar</button>
+</div>
+
+<div class="card">
+  <img src="https://via.placeholder.com/400x300" alt="Vela intencionada">
+  <h3>Vela Intencionada</h3>
+  <p>Amor y prosperidad</p>
+  <p class="precio">$22.000 COP</p>
+  <button onclick="comprar('Vela Intencionada','22000')">Comprar</button>
+</div>
+
+<div class="card">
+  <img src="https://via.placeholder.com/400x300" alt="Pack de velas">
+  <h3>Pack de Velas</h3>
+  <p>3 aromas especiales</p>
+  <p class="precio">$50.000 COP</p>
+  <button onclick="comprar('Pack de Velas','50000')">Comprar</button>
+</div>
+
+  </div>
+</div><footer>
+  <p>📲 Pedidos por WhatsApp | Envíos a toda Colombia</p>
+</footer><script>
+  function comprar(producto, precio){
+    let telefono = '573026931696'; // Cambiar por el WhatsApp real
+    let mensaje = "Hola, estoy interesado en comprar: ${producto} por $${precio} COP";
+    let url = https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)};
+    window.open(url, '_blank');
+  }
+</script></body>
+</html>
